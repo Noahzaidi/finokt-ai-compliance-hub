@@ -47,7 +47,7 @@ export const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-fintech-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
             Powerful Features for Modern Compliance
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ export const Features = () => {
                 <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-fintech-navy text-xl">
+                <CardTitle className="text-brand-navy text-xl">
                   {feature.title}
                 </CardTitle>
               </CardHeader>

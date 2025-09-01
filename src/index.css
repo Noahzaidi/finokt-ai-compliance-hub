@@ -9,24 +9,24 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 17% 23%;
+    --foreground: 0 0% 7%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 17% 23%;
+    --card-foreground: 0 0% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 17% 23%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 210 100% 12%;
+    --primary: 215 40% 43%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 17% 96%;
-    --secondary-foreground: 210 17% 23%;
+    --secondary-foreground: 0 0% 7%;
 
     --muted: 210 17% 96%;
-    --muted-foreground: 210 10% 45%;
+    --muted-foreground: 220 3% 54%;
 
-    --accent: 184 81% 29%;
+    --accent: 0 100% 31%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,26 +34,34 @@ All colors MUST be HSL.
 
     --border: 210 17% 89%;
     --input: 210 17% 89%;
-    --ring: 210 100% 12%;
+    --ring: 215 40% 43%;
 
     --radius: 0.75rem;
 
-    /* Custom FinoktAI Design Tokens */
-    --fintech-navy: 210 100% 12%;
-    --fintech-gray: 210 17% 23%;
-    --fintech-teal: 184 81% 29%;
-    --fintech-light-teal: 184 50% 85%;
-    --fintech-success: 142 76% 36%;
+    /* FinoktAI Brand Colors from Brand Guidelines */
+    --queen-blue: 215 40% 43%;      /* #3B639E */
+    --crimson-red: 0 100% 31%;      /* #9C0001 */  
+    --baby-blue: 215 100% 80%;      /* #9CC9FF */
+    --roman-silver: 220 3% 54%;     /* #868A94 */
+    --chinese-black: 0 0% 7%;       /* #111111 */
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--fintech-navy)), hsl(var(--fintech-teal)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--fintech-teal)), hsl(var(--fintech-light-teal)));
+    /* Design System Tokens */
+    --fintech-navy: 215 40% 43%;
+    --fintech-gray: 0 0% 7%;
+    --fintech-teal: 215 100% 80%;
+    --fintech-light-teal: 215 100% 90%;
+    --fintech-success: 142 76% 36%;
+    --fintech-red: 0 100% 31%;
+    
+    /* Gradients using brand colors */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--queen-blue)), hsl(var(--baby-blue)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--baby-blue)), hsl(var(--fintech-light-teal)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
     
-    /* Shadows */
-    --shadow-fintech: 0 4px 20px hsl(var(--fintech-navy) / 0.1);
-    --shadow-card: 0 2px 10px hsl(var(--fintech-navy) / 0.05);
-    --shadow-hero: 0 8px 32px hsl(var(--fintech-navy) / 0.15);
+    /* Shadows using brand colors */
+    --shadow-fintech: 0 4px 20px hsl(var(--queen-blue) / 0.1);
+    --shadow-card: 0 2px 10px hsl(var(--queen-blue) / 0.05);
+    --shadow-hero: 0 8px 32px hsl(var(--queen-blue) / 0.15);
 
     --sidebar-background: 0 0% 98%;
 

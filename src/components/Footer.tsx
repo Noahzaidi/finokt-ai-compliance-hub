@@ -1,5 +1,6 @@
-import { Shield, Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FinoktAILogo } from "@/components/FinoktAILogo";
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
@@ -18,16 +19,15 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-fintech-navy text-white py-16">
+    <footer className="bg-brand-navy text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-accent" />
-              <span className="text-xl font-bold">FinoktAI</span>
+            <div className="mb-4">
+              <FinoktAILogo className="text-white" />
             </div>
-            <p className="text-lg text-fintech-light-teal mb-6">
+            <p className="text-lg text-brand-blue mb-6">
               AI for Smarter Compliance
             </p>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">

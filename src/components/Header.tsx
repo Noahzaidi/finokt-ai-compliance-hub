@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FinoktAILogo } from "@/components/FinoktAILogo";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -16,9 +17,8 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-accent" />
-            <span className="text-xl font-bold text-fintech-navy">FinoktAI</span>
+          <Link to="/" className="flex items-center">
+            <FinoktAILogo />
           </Link>
 
           {/* Desktop Navigation */}

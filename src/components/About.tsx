@@ -20,7 +20,7 @@ export const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-fintech-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
             About FinoktAI
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -35,7 +35,7 @@ export const About = () => {
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
                 <Target className="h-6 w-6 text-accent" />
-                <h3 className="text-2xl font-bold text-fintech-navy">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-brand-navy">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 To make compliance faster, smarter, and more affordable for financial institutions 
@@ -47,7 +47,7 @@ export const About = () => {
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
                 <Building2 className="h-6 w-6 text-accent" />
-                <h3 className="text-2xl font-bold text-fintech-navy">Why Choose Us</h3>
+                <h3 className="text-2xl font-bold text-brand-navy">Why Choose Us</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
@@ -77,7 +77,7 @@ export const About = () => {
                 <div className="w-24 h-24 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">NZ</span>
                 </div>
-                <h3 className="text-2xl font-bold text-fintech-navy mb-2">Noah Zaidi</h3>
+                <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
                 <p className="text-accent font-semibold mb-4">Founder & CEO</p>
               </div>
 

@@ -17,9 +17,9 @@ export const Hero = () => {
           {/* Content */}
           <div className="mb-12 lg:mb-0">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-fintech-navy mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-brand-navy mb-6 leading-tight">
                 AI-Powered KYC &{" "}
-                <span className="text-accent">Compliance Automation</span>
+                <span className="text-brand-red">Compliance Automation</span>
               </h1>
               
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">

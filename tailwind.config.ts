@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				'brand': ['Inter', 'system-ui', 'sans-serif'], // Using Inter as Glancyr substitute
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -62,12 +66,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// FinoktAI Brand Colors
+				brand: {
+					navy: 'hsl(var(--queen-blue))',
+					red: 'hsl(var(--crimson-red))',
+					blue: 'hsl(var(--baby-blue))',
+					silver: 'hsl(var(--roman-silver))',
+					black: 'hsl(var(--chinese-black))'
+				},
 				fintech: {
 					navy: 'hsl(var(--fintech-navy))',
 					gray: 'hsl(var(--fintech-gray))',
 					teal: 'hsl(var(--fintech-teal))',
 					'light-teal': 'hsl(var(--fintech-light-teal))',
-					success: 'hsl(var(--fintech-success))'
+					success: 'hsl(var(--fintech-success))',
+					red: 'hsl(var(--fintech-red))'
 				}
 			},
 			backgroundImage: {

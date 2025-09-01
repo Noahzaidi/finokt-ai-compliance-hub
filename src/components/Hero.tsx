@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/hero-dashboard.jpg";
+import heroImage from "@/assets/hero-futuristic.jpg";
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-futuristic py-12 lg:py-20 overflow-hidden min-h-[80vh] flex items-center">
+    <section className="relative bg-gradient-futuristic py-8 lg:py-16 overflow-hidden min-h-[90vh] flex items-center">
       {/* Futuristic background elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-brand-blue/10 rounded-full blur-3xl animate-pulse"></div>
@@ -19,24 +19,24 @@ export const Hero = () => {
       <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-brand-blue rounded-full animate-ping"></div>
       <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-brand-blue rounded-full animate-ping delay-500"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
           {/* Content */}
-          <div className="mb-12 lg:mb-0">
+          <div className="mb-8 lg:mb-0 lg:col-span-5">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-brand-navy mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-navy mb-4 lg:mb-6 leading-tight">
                 AI-Powered KYC &{" "}
                 <span className="text-brand-blue">Compliance Automation</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg lg:text-xl text-muted-foreground mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0">
                 FinoktAI helps banks and financial institutions streamline onboarding, 
                 reduce costs, and stay compliant — with intelligent document processing 
                 and automated risk checks.
               </p>
 
               {/* Key Benefits */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-6 lg:mb-8 justify-center lg:justify-start">
                 <div className="flex items-center gap-2 text-fintech-gray">
                   <CheckCircle className="h-5 w-5 text-fintech-success" />
                   <span>90% faster onboarding</span>
@@ -52,7 +52,7 @@ export const Hero = () => {
               </div>
 
               {/* CTA */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start">
                 <Button 
                   variant="cta" 
                   size="lg"
@@ -70,13 +70,13 @@ export const Hero = () => {
           </div>
 
           {/* Hero Image with futuristic styling */}
-          <div className="relative">
+          <div className="relative lg:col-span-7">
             <div className="relative z-10">
               <div className="relative group">
                 <img
                   src={heroImage}
                   alt="AI-powered compliance automation dashboard"
-                  className="w-full h-auto rounded-2xl shadow-glow transform group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-glow transform group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Futuristic overlay effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

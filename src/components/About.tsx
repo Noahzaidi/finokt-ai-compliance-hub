@@ -78,7 +78,7 @@ export const About = () => {
                   <span className="text-2xl font-bold text-white">NZ</span>
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
-                <p className="text-brand-blue font-semibold mb-4">Founder & CEO</p>
+                <p className="text-brand-blue font-semibold mb-4">Co-founder & AI Project Manager</p>
               </div>
 
               <div className="space-y-4 mb-6">
@@ -87,7 +87,7 @@ export const About = () => {
                   <span className="text-muted-foreground">PMP Certified Project Manager</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">ERP Consultant</Badge>
+                  <Badge variant="secondary">AI Project Manager</Badge>
                   <Badge variant="secondary">Compliance Expert</Badge>
                   <Badge variant="secondary">AI Specialist</Badge>
                   <Badge variant="secondary">Fintech</Badge>
@@ -96,7 +96,7 @@ export const About = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With extensive experience in compliance consulting, ERP implementation, 
+                With extensive experience in compliance consulting, AI project management, 
                 and fintech innovation, Noah brings deep industry knowledge to solve 
                 real compliance challenges with cutting-edge AI technology.
               </p>

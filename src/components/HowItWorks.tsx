@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Upload, Brain, UserCheck } from "lucide-react";
+import { Upload, Brain, UserCheck, Shield } from "lucide-react";
 
 const steps = [
   {
@@ -16,6 +16,12 @@ const steps = [
   },
   {
     step: "03",
+    icon: Shield,
+    title: "Real-Time Monitoring",
+    description: "Powerful risk monitoring tools track compliance in real-time with comprehensive reports and audit trails."
+  },
+  {
+    step: "04",
     icon: UserCheck,
     title: "Review & Approve",
     description: "Compliance officers review flagged cases in the dashboard and approve verified customers."
@@ -36,12 +42,12 @@ export const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Simple, secure, and efficient KYC automation in three easy steps
+            Comprehensive KYC automation with powerful risk monitoring and reporting in four steps
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <Card className="border-border hover:shadow-glow transition-all duration-300 group hover:border-brand-blue/30 relative overflow-hidden">

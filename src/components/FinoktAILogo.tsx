@@ -52,9 +52,9 @@ export const FinoktAILogo: FC<FinoktAILogoProps> = ({ className = "", size = 'md
         </svg>
       </div>
       
-      {/* Text Logo - Reduced red usage */}
+      {/* Text Logo - Original branding with red AI */}
       <span className={`font-bold ${fontSize[size]} text-brand-navy`}>
-        Finokt<span className="text-brand-blue">AI</span>
+        Finokt<span className="text-brand-red">AI</span>
       </span>
     </div>
   );

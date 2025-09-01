@@ -66,32 +66,34 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// FinoktAI Brand Colors
+				// FinoktAI Brand Colors - Updated scheme
 				brand: {
 					navy: 'hsl(var(--queen-blue))',
-					red: 'hsl(var(--crimson-red))',
 					blue: 'hsl(var(--baby-blue))',
+					'blue-light': 'hsl(var(--fintech-secondary))',
+					red: 'hsl(var(--crimson-red))', // Minimal usage
 					silver: 'hsl(var(--roman-silver))',
 					black: 'hsl(var(--chinese-black))'
 				},
 				fintech: {
 					navy: 'hsl(var(--fintech-navy))',
+					primary: 'hsl(var(--fintech-primary))',
+					secondary: 'hsl(var(--fintech-secondary))',
 					gray: 'hsl(var(--fintech-gray))',
-					teal: 'hsl(var(--fintech-teal))',
-					'light-teal': 'hsl(var(--fintech-light-teal))',
-					success: 'hsl(var(--fintech-success))',
-					red: 'hsl(var(--fintech-red))'
+					success: 'hsl(var(--fintech-success))'
 				}
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-futuristic': 'var(--gradient-futuristic)'
 			},
 			boxShadow: {
 				fintech: 'var(--shadow-fintech)',
 				card: 'var(--shadow-card)',
-				hero: 'var(--shadow-hero)'
+				hero: 'var(--shadow-hero)',
+				glow: 'var(--shadow-glow)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

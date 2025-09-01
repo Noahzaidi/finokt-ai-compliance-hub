@@ -11,15 +11,22 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-subtle py-20 lg:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-futuristic py-20 lg:py-32 overflow-hidden">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
+      <div className="absolute top-10 left-10 w-32 h-32 bg-brand-blue/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-48 h-48 bg-brand-navy/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-brand-blue rounded-full animate-ping"></div>
+      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-brand-blue rounded-full animate-ping delay-500"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
           {/* Content */}
           <div className="mb-12 lg:mb-0">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-6xl font-bold text-brand-navy mb-6 leading-tight">
                 AI-Powered KYC &{" "}
-                <span className="text-brand-red">Compliance Automation</span>
+                <span className="text-brand-blue">Compliance Automation</span>
               </h1>
               
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -62,17 +69,22 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image with futuristic styling */}
           <div className="relative">
             <div className="relative z-10">
-              <img
-                src={heroImage}
-                alt="AI-powered compliance automation dashboard"
-                className="w-full h-auto rounded-2xl shadow-hero"
-              />
+              <div className="relative group">
+                <img
+                  src={heroImage}
+                  alt="AI-powered compliance automation dashboard"
+                  className="w-full h-auto rounded-2xl shadow-glow transform group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Futuristic overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             </div>
-            {/* Background decoration */}
-            <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-accent rounded-2xl opacity-20 -z-10"></div>
+            {/* Enhanced background decoration */}
+            <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-accent rounded-2xl opacity-30 -z-10 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-full h-full bg-brand-blue/10 rounded-2xl -z-20"></div>
           </div>
         </div>
       </div>

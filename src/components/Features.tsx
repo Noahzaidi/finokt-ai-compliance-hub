@@ -26,13 +26,13 @@ const features = [
   },
   {
     icon: Monitor,
-    title: "Back-Office Dashboard",
-    description: "Comprehensive dashboard for compliance officers with case management and detailed reporting."
+    title: "Comprehensive Audit Trails",
+    description: "Complete audit trails and compliance documentation with automated timestamping and user tracking for regulatory requirements."
   },
   {
     icon: Zap,
-    title: "Secure API Integration",
-    description: "RESTful APIs with enterprise-grade security for seamless integration with existing systems."
+    title: "Powerful Analytics & Reports",
+    description: "Advanced reporting dashboard with custom analytics, compliance metrics, and executive summaries for data-driven decisions."
   },
   {
     icon: Lock,
@@ -56,22 +56,24 @@ export const Features = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
+        {/* Features Grid with enhanced styling */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="border-border hover:shadow-card transition-shadow duration-300 group"
+              className="border-border hover:shadow-glow transition-all duration-300 group hover:border-brand-blue/30 relative overflow-hidden"
             >
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              {/* Futuristic background glow */}
+              <div className="absolute inset-0 bg-gradient-futuristic opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardHeader className="relative z-10">
+                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-brand-navy text-xl">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <CardDescription className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </CardDescription>

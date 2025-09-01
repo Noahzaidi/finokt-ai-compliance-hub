@@ -26,7 +26,7 @@ export const Demo = () => {
               <Card className="border-border shadow-card mb-8">
                 <CardHeader>
                   <CardTitle className="text-2xl text-brand-navy flex items-center gap-3">
-                    <Calendar className="h-6 w-6 text-brand-red" />
+                    <Calendar className="h-6 w-6 text-brand-blue" />
                     What to Expect
                   </CardTitle>
                 </CardHeader>
@@ -65,7 +65,7 @@ export const Demo = () => {
               <Card className="border-border shadow-card">
                 <CardHeader>
                   <CardTitle className="text-2xl text-brand-navy flex items-center gap-3">
-                    <Clock className="h-6 w-6 text-brand-red" />
+                    <Clock className="h-6 w-6 text-brand-blue" />
                     Demo Details
                   </CardTitle>
                 </CardHeader>

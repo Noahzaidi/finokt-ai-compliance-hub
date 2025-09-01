@@ -44,17 +44,17 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-gray-300 hover:text-accent transition-colors">
+                <a href="#features" className="text-gray-300 hover:text-brand-blue transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="text-gray-300 hover:text-accent transition-colors">
+                <a href="#how-it-works" className="text-gray-300 hover:text-brand-blue transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-accent transition-colors">
+                <a href="#about" className="text-gray-300 hover:text-brand-blue transition-colors">
                   About Us
                 </a>
               </li>

@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --muted: 210 17% 96%;
     --muted-foreground: 220 3% 54%;
 
-    --accent: 0 100% 31%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 215 100% 80%;
+    --accent-foreground: 215 40% 43%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -40,28 +40,29 @@ All colors MUST be HSL.
 
     /* FinoktAI Brand Colors from Brand Guidelines */
     --queen-blue: 215 40% 43%;      /* #3B639E */
-    --crimson-red: 0 100% 31%;      /* #9C0001 */  
-    --baby-blue: 215 100% 80%;      /* #9CC9FF */
+    --baby-blue: 215 100% 80%;      /* #9CC9FF - Primary accent now */
+    --crimson-red: 0 100% 31%;      /* #9C0001 - Minimal usage */  
     --roman-silver: 220 3% 54%;     /* #868A94 */
     --chinese-black: 0 0% 7%;       /* #111111 */
     
-    /* Design System Tokens */
+    /* Design System Tokens - Updated to emphasize blue */
     --fintech-navy: 215 40% 43%;
+    --fintech-primary: 215 100% 80%;  /* Baby blue as primary accent */
+    --fintech-secondary: 215 100% 90%; /* Lighter baby blue */
     --fintech-gray: 0 0% 7%;
-    --fintech-teal: 215 100% 80%;
-    --fintech-light-teal: 215 100% 90%;
     --fintech-success: 142 76% 36%;
-    --fintech-red: 0 100% 31%;
     
-    /* Gradients using brand colors */
+    /* Gradients using brand colors - More blue focused */
     --gradient-hero: linear-gradient(135deg, hsl(var(--queen-blue)), hsl(var(--baby-blue)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--baby-blue)), hsl(var(--fintech-light-teal)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--baby-blue)), hsl(var(--fintech-secondary)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-futuristic: linear-gradient(135deg, hsl(var(--baby-blue) / 0.1), hsl(var(--queen-blue) / 0.05));
     
     /* Shadows using brand colors */
     --shadow-fintech: 0 4px 20px hsl(var(--queen-blue) / 0.1);
     --shadow-card: 0 2px 10px hsl(var(--queen-blue) / 0.05);
-    --shadow-hero: 0 8px 32px hsl(var(--queen-blue) / 0.15);
+    --shadow-hero: 0 8px 32px hsl(var(--baby-blue) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--baby-blue) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 

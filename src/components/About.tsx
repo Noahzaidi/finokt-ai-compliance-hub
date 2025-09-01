@@ -34,7 +34,7 @@ export const About = () => {
           <div>
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Target className="h-6 w-6 text-accent" />
+                <Target className="h-6 w-6 text-brand-blue" />
                 <h3 className="text-2xl font-bold text-brand-navy">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
@@ -46,7 +46,7 @@ export const About = () => {
 
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Building2 className="h-6 w-6 text-accent" />
+                <Building2 className="h-6 w-6 text-brand-blue" />
                 <h3 className="text-2xl font-bold text-brand-navy">Why Choose Us</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
@@ -78,12 +78,12 @@ export const About = () => {
                   <span className="text-2xl font-bold text-white">NZ</span>
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
-                <p className="text-accent font-semibold mb-4">Founder & CEO</p>
+                <p className="text-brand-blue font-semibold mb-4">Founder & CEO</p>
               </div>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-2">
-                  <Award className="h-5 w-5 text-accent" />
+                  <Award className="h-5 w-5 text-brand-blue" />
                   <span className="text-muted-foreground">PMP Certified Project Manager</span>
                 </div>
                 <div className="flex flex-wrap gap-2">

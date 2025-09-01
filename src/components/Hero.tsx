@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/hero-fintech.jpg";
+import heroImage from "@/assets/hero-dashboard.jpg";
 
 export const Hero = () => {
   const navigate = useNavigate();

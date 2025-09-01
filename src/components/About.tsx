@@ -74,8 +74,12 @@ export const About = () => {
           <Card className="border-border shadow-card">
             <CardContent className="p-8">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">NZ</span>
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-brand-blue">
+                  <img 
+                    src="/lovable-uploads/f38f3be7-e6c5-4814-8bc0-5c353c96d786.png" 
+                    alt="Noah Zaidi - Co-founder & CEO of FinoktAI"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
                 <p className="text-brand-blue font-semibold mb-4">Co-founder & CEO</p>

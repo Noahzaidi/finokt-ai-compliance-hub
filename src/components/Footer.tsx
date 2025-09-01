@@ -25,7 +25,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <FinoktAILogo className="text-white" />
+              <FinoktAILogo className="[&_span]:text-white [&_svg]:text-white" />
             </div>
             <p className="text-lg text-brand-blue mb-6">
               AI for Smarter Compliance

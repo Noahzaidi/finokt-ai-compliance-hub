@@ -78,7 +78,7 @@ export const About = () => {
                   <span className="text-2xl font-bold text-white">NZ</span>
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
-                <p className="text-brand-blue font-semibold mb-4">Co-founder & AI Project Manager</p>
+                <p className="text-brand-blue font-semibold mb-4">Co-founder & CEO</p>
               </div>
 
               <div className="space-y-4 mb-6">

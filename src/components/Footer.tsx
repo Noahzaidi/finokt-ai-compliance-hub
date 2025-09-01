@@ -1,0 +1,108 @@
+import { Shield, Mail, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+
+export const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleDemoClick = () => {
+    navigate("/demo");
+  };
+
+  const handleEmailClick = () => {
+    window.open("mailto:noah.zaidi1@gmail.com", "_blank");
+  };
+
+  const handleLinkedinClick = () => {
+    window.open("https://linkedin.com/in/noahzaidi", "_blank");
+  };
+
+  return (
+    <footer className="bg-fintech-navy text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <Shield className="h-8 w-8 text-accent" />
+              <span className="text-xl font-bold">FinoktAI</span>
+            </div>
+            <p className="text-lg text-fintech-light-teal mb-6">
+              AI for Smarter Compliance
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
+              Revolutionizing KYC and compliance automation for banks and financial 
+              institutions with cutting-edge AI technology.
+            </p>
+            <Button variant="accent" onClick={handleDemoClick}>
+              Book a Demo
+            </Button>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#features" className="text-gray-300 hover:text-accent transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#how-it-works" className="text-gray-300 hover:text-accent transition-colors">
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-300 hover:text-accent transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <button 
+                  onClick={handleDemoClick}
+                  className="text-gray-300 hover:text-accent transition-colors text-left"
+                >
+                  Schedule Demo
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-3">
+              <button
+                onClick={handleEmailClick}
+                className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors group"
+              >
+                <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                <span>noah.zaidi1@gmail.com</span>
+              </button>
+              <button
+                onClick={handleLinkedinClick}
+                className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors group"
+              >
+                <Linkedin className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                <span>LinkedIn Profile</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-center md:text-left">
+              © 2024 FinoktAI. All rights reserved.
+            </p>
+            <p className="text-gray-400 text-center md:text-right">
+              Built for the future of financial compliance
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};

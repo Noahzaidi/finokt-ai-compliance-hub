@@ -61,7 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				fintech: {
+					navy: 'hsl(var(--fintech-navy))',
+					gray: 'hsl(var(--fintech-gray))',
+					teal: 'hsl(var(--fintech-teal))',
+					'light-teal': 'hsl(var(--fintech-light-teal))',
+					success: 'hsl(var(--fintech-success))'
 				}
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				fintech: 'var(--shadow-fintech)',
+				card: 'var(--shadow-card)',
+				hero: 'var(--shadow-hero)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

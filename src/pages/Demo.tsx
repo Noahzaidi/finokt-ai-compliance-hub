@@ -34,29 +34,29 @@ export const Demo = () => {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Live Product Demo</h3>
-                      <p className="text-muted-foreground">Interactive walkthrough of our AI-powered compliance platform</p>
+                      <h3 className="font-semibold text-brand-navy">Discovery Meeting (30 minutes)</h3>
+                      <p className="text-muted-foreground">Initial consultation to understand your specific problems and compliance challenges</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Custom Use Cases</h3>
-                      <p className="text-muted-foreground">Discussion tailored to your specific compliance requirements</p>
+                      <h3 className="font-semibold text-brand-navy">Tailored Demo (30 minutes)</h3>
+                      <p className="text-muted-foreground">Customized product demonstration focused on solving your identified challenges</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">ROI Analysis</h3>
-                      <p className="text-muted-foreground">Projected savings and efficiency improvements for your organization</p>
+                      <h3 className="font-semibold text-brand-navy">Solution Mapping</h3>
+                      <p className="text-muted-foreground">Direct alignment of our AI platform features to your compliance requirements</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Implementation Roadmap</h3>
-                      <p className="text-muted-foreground">Clear next steps and timeline for getting started</p>
+                      <h3 className="font-semibold text-brand-navy">ROI Analysis & Next Steps</h3>
+                      <p className="text-muted-foreground">Projected savings and clear implementation roadmap for your organization</p>
                     </div>
                   </div>
                 </CardContent>

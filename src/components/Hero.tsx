@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-futuristic py-20 lg:py-32 overflow-hidden">
+    <section className="relative bg-gradient-futuristic py-12 lg:py-20 overflow-hidden min-h-[80vh] flex items-center">
       {/* Futuristic background elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-90"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-brand-blue/10 rounded-full blur-3xl animate-pulse"></div>
@@ -19,7 +19,7 @@ export const Hero = () => {
       <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-brand-blue rounded-full animate-ping"></div>
       <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-brand-blue rounded-full animate-ping delay-500"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
           {/* Content */}
           <div className="mb-12 lg:mb-0">

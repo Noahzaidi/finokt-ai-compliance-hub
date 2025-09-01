@@ -11,7 +11,7 @@ export const Footer = () => {
   };
 
   const handleEmailClick = () => {
-    window.open("mailto:noah.zaidi1@gmail.com", "_blank");
+    window.open("mailto:noah.zaidi@finokt.com", "_blank");
   };
 
   const handleLinkedinClick = () => {
@@ -78,7 +78,7 @@ export const Footer = () => {
                 className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors group"
               >
                 <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                <span>noah.zaidi1@gmail.com</span>
+                <span>noah.zaidi@finokt.com</span>
               </button>
               <button
                 onClick={handleLinkedinClick}

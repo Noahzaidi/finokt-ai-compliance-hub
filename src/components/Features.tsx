@@ -5,7 +5,9 @@ import {
   TrendingUp, 
   Monitor, 
   Zap,
-  Lock
+  Lock,
+  ScanFace,
+  User
 } from "lucide-react";
 
 const features = [
@@ -13,6 +15,16 @@ const features = [
     icon: FileCheck,
     title: "Automated Document Verification",
     description: "Advanced OCR, ID parsing, and MRZ validation for instant document processing with 99.9% accuracy."
+  },
+  {
+    icon: ScanFace,
+    title: "Biometric Face Matching",
+    description: "Advanced facial recognition technology compares live selfies with document photos for identity verification with 99.8% accuracy."
+  },
+  {
+    icon: User,
+    title: "Liveness Detection",
+    description: "Sophisticated anti-spoofing technology detects live faces versus photos, masks, or videos for enhanced security."
   },
   {
     icon: Shield,

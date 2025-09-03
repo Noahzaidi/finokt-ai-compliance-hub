@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Upload, Brain, UserCheck, Shield } from "lucide-react";
+import { Upload, Brain, UserCheck, Shield, ScanFace } from "lucide-react";
 
 const steps = [
   {
@@ -10,18 +10,24 @@ const steps = [
   },
   {
     step: "02", 
+    icon: ScanFace,
+    title: "Biometric Verification",
+    description: "Advanced face matching and liveness detection verify customer identity against document photos with 99.8% accuracy."
+  },
+  {
+    step: "03", 
     icon: Brain,
     title: "AI Processing",
     description: "Our AI extracts data fields, validates authenticity, and runs comprehensive compliance checks instantly."
   },
   {
-    step: "03",
+    step: "04",
     icon: Shield,
     title: "Real-Time Monitoring",
     description: "Powerful risk monitoring tools track compliance in real-time with comprehensive reports and audit trails."
   },
   {
-    step: "04",
+    step: "05",
     icon: UserCheck,
     title: "Review & Approve",
     description: "Compliance officers review flagged cases in the dashboard and approve verified customers."
@@ -42,12 +48,12 @@ export const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive KYC automation with powerful risk monitoring and reporting in four steps
+            Comprehensive KYC automation with biometric verification, risk monitoring and reporting in five steps
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <Card className="border-border hover:shadow-glow transition-all duration-300 group hover:border-brand-blue/30 relative overflow-hidden">

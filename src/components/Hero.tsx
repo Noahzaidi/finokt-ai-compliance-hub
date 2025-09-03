@@ -31,8 +31,8 @@ export const Hero = () => {
               
               <p className="text-lg lg:text-xl text-muted-foreground mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0">
                 FinoktAI helps banks and financial institutions streamline onboarding, 
-                reduce costs, and stay compliant — with intelligent document processing 
-                and automated risk checks.
+                reduce costs, and stay compliant — with intelligent document processing, 
+                biometric face matching, and automated risk checks.
               </p>
 
               {/* Key Benefits */}

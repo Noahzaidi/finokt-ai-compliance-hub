@@ -1,10 +1,13 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FinoktAILogo } from "@/components/FinoktAILogo";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { CookieSettingsModal } from "./CookieSettingsModal";
 
 export const Footer = () => {
   const navigate = useNavigate();
+  const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
 
   const handleDemoClick = () => {
     navigate("/demo");
@@ -16,6 +19,10 @@ export const Footer = () => {
 
   const handleLinkedinClick = () => {
     window.open("https://linkedin.com/in/noahzaidi", "_blank");
+  };
+
+  const handleCookieSettings = () => {
+    setIsCookieModalOpen(true);
   };
 
   return (
@@ -66,6 +73,15 @@ export const Footer = () => {
                   Schedule Demo
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={handleCookieSettings}
+                  className="text-gray-300 hover:text-accent transition-colors text-left flex items-center gap-2"
+                >
+                  <Settings className="h-4 w-4" />
+                  Cookie Settings
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -97,12 +113,34 @@ export const Footer = () => {
             <p className="text-gray-400 text-center md:text-left">
               © 2024 FinoktAI. All rights reserved.
             </p>
-            <p className="text-gray-400 text-center md:text-right">
-              Built for the future of financial compliance
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <p className="text-gray-400 text-center md:text-right">
+                Built for the future of financial compliance
+              </p>
+              <div className="flex items-center gap-4 text-sm">
+                <a 
+                  href="/privacy-policy" 
+                  target="_blank"
+                  className="text-gray-400 hover:text-accent transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <button 
+                  onClick={handleCookieSettings}
+                  className="text-gray-400 hover:text-accent transition-colors"
+                >
+                  Cookie Settings
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
+      <CookieSettingsModal 
+        isOpen={isCookieModalOpen} 
+        onClose={() => setIsCookieModalOpen(false)} 
+      />
     </footer>
   );
 };

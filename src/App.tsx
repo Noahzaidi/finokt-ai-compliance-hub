@@ -2,14 +2,26 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Index from "./pages/Index";
 import { Demo } from "./pages/Demo";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import { CookieConsent } from "./components/CookieConsent";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
+
+const HashRedirector = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (location.hash && location.pathname !== "/") {
+      navigate(`/${location.hash}`, { replace: true });
+    }
+  }, [location, navigate]);
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -17,6 +29,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <HashRedirector />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/demo" element={<Demo />} />

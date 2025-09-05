@@ -76,7 +76,7 @@ export const About = () => {
               <div className="text-center mb-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-brand-blue">
                   <img 
-                    src="/lovable-uploads/f38f3be7-e6c5-4814-8bc0-5c353c96d786.png" 
+                    src={`${import.meta.env.BASE_URL}lovable-uploads/f38f3be7-e6c5-4814-8bc0-5c353c96d786.png`} 
                     alt="Noah Zaidi - Co-founder & CEO of FinoktAI"
                     className="w-full h-full object-cover"
                   />

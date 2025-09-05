@@ -1,7 +1,7 @@
 import { Mail, Linkedin, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FinoktAILogo } from "@/components/FinoktAILogo";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { CookieSettingsModal } from "./CookieSettingsModal";
 
@@ -51,19 +51,19 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-gray-300 hover:text-brand-blue transition-colors">
+                <Link to="/#features" className="text-gray-300 hover:text-brand-blue transition-colors">
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="text-gray-300 hover:text-brand-blue transition-colors">
+                <Link to="/#how-it-works" className="text-gray-300 hover:text-brand-blue transition-colors">
                   How It Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-brand-blue transition-colors">
+                <Link to="/#about" className="text-gray-300 hover:text-brand-blue transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <button 
@@ -118,13 +118,13 @@ export const Footer = () => {
                 Built for the future of financial compliance
               </p>
               <div className="flex items-center gap-4 text-sm">
-                <a 
-                  href="/privacy-policy" 
+                <Link 
+                  to="/privacy-policy" 
                   target="_blank"
                   className="text-gray-400 hover:text-accent transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
                 <button 
                   onClick={handleCookieSettings}
                   className="text-gray-400 hover:text-accent transition-colors"

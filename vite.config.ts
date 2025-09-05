@@ -9,14 +9,19 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "/", // 👈 Important: ensures correct paths on GitHub Pages (finokt.com)
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist",  // default, but explicit
+    sourcemap: false,
+    emptyOutDir: true,
   },
 }));

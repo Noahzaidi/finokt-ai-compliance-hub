@@ -142,7 +142,7 @@ const translations: Translations = {
     "footer.copyright": "© 2024 FinoktAI. All rights reserved.",
     "footer.bottomTag": "Built for the future of financial compliance",
     "footer.privacyPolicy": "Privacy Policy",
-    "footer.address": "5 Parv. Alan Turing, 75013 Paris, Francia",
+    "footer.address": "5 Parv. Alan Turing, 75013 Paris, France",
 
     "demo.title": "Book Your Personalized Demo",
     "demo.subtitle": "See how FinoktAI can transform your KYC and compliance processes. Schedule a personalized demo with our founder, Noah Zaidi.",
@@ -287,7 +287,7 @@ const translations: Translations = {
     "footer.copyright": "© 2024 FinoktAI. Tous droits réservés.",
     "footer.bottomTag": "Conçu pour l’avenir de la conformité financière",
     "footer.privacyPolicy": "Politique de confidentialité",
-    "footer.address": "5 Parv. Alan Turing, 75013 Paris, Francia",
+    "footer.address": "5 Parv. Alan Turing, 75013 Paris, France",
 
     "demo.title": "Réservez votre démo personnalisée",
     "demo.subtitle": "Découvrez comment FinoktAI peut transformer vos processus KYC et de conformité. Planifiez une démo personnalisée avec notre fondateur, Noah Zaidi.",

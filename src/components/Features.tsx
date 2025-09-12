@@ -9,62 +9,63 @@ import {
   ScanFace,
   User
 } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const features = [
   {
     icon: FileCheck,
-    title: "Automated Document Verification",
-    description: "Advanced OCR, ID parsing, and MRZ validation for instant document processing with 99.9% accuracy."
+    titleKey: "features.1.title",
+    descriptionKey: "features.1.desc"
   },
   {
     icon: ScanFace,
-    title: "Biometric Face Matching",
-    description: "Advanced facial recognition technology compares live selfies with document photos for identity verification with 99.8% accuracy."
+    titleKey: "features.2.title",
+    descriptionKey: "features.2.desc"
   },
   {
     icon: User,
-    title: "Liveness Detection",
-    description: "Sophisticated anti-spoofing technology detects live faces versus photos, masks, or videos for enhanced security."
+    titleKey: "features.3.title",
+    descriptionKey: "features.3.desc"
   },
   {
     icon: Shield,
-    title: "Dynamic Compliance Checks",
-    description: "Real-time PEP, Sanctions, FATCA/CRS screening with country-specific regulatory rules."
+    titleKey: "features.4.title",
+    descriptionKey: "features.4.desc"
   },
   {
     icon: TrendingUp,
-    title: "Real-time Risk Scoring",
-    description: "Intelligent risk assessment with low, medium, and high risk categorization for informed decisions."
+    titleKey: "features.5.title",
+    descriptionKey: "features.5.desc"
   },
   {
     icon: Monitor,
-    title: "Comprehensive Audit Trails",
-    description: "Complete audit trails and compliance documentation with automated timestamping and user tracking for regulatory requirements."
+    titleKey: "features.6.title",
+    descriptionKey: "features.6.desc"
   },
   {
     icon: Zap,
-    title: "Powerful Analytics & Reports",
-    description: "Advanced reporting dashboard with custom analytics, compliance metrics, and executive summaries for data-driven decisions."
+    titleKey: "features.7.title",
+    descriptionKey: "features.7.desc"
   },
   {
     icon: Lock,
-    title: "Enterprise Security",
-    description: "Bank-grade encryption, GDPR compliance, and audit trails for complete data protection."
+    titleKey: "features.8.title",
+    descriptionKey: "features.8.desc"
   }
 ];
 
 export const Features = () => {
+  const { t } = useI18n();
   return (
     <section id="features" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
-            Powerful Features for Modern Compliance
+            {t("features.header")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to automate KYC processes, reduce manual work, 
-            and maintain regulatory compliance with cutting-edge AI technology.
+            {t("features.description")}
           </p>
         </div>
 
@@ -82,12 +83,12 @@ export const Features = () => {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-brand-navy text-xl">
-                  {feature.title}
+                  {t(feature.titleKey)}
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
                 <CardDescription className="text-muted-foreground leading-relaxed">
-                  {feature.description}
+                  {t(feature.descriptionKey)}
                 </CardDescription>
               </CardContent>
             </Card>

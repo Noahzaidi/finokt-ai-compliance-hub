@@ -70,5 +70,40 @@ export const consentTexts: Record<Language, ConsentTexts> = {
       cancel: 'Cancelar',
       withdraw: 'Retirar Consentimiento'
     }
+  },
+  fr: {
+    banner: {
+      title: 'Nous utilisons des cookies',
+      description: 'Nous utilisons des cookies pour améliorer votre navigation, proposer du contenu personnalisé et analyser notre trafic. En cliquant sur "Tout accepter", vous consentez à l\'utilisation des cookies.',
+      acceptAll: 'Tout accepter',
+      rejectAll: 'Tout refuser',
+      customize: 'Personnaliser',
+      privacyPolicy: 'Politique de confidentialité'
+    },
+    modal: {
+      title: 'Paramètres des cookies',
+      description: 'Choisissez les cookies que vous souhaitez accepter. Vous pouvez modifier ces paramètres à tout moment.',
+      categories: {
+        'strictly-necessary': {
+          title: 'Strictement nécessaires',
+          description: 'Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés.'
+        },
+        preferences: {
+          title: 'Préférences',
+          description: 'Ces cookies nous permettent de mémoriser vos choix et d\'offrir des fonctionnalités améliorées.'
+        },
+        analytics: {
+          title: 'Analyse',
+          description: 'Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site.'
+        },
+        marketing: {
+          title: 'Marketing',
+          description: 'Ces cookies sont utilisés pour diffuser des publicités personnalisées et mesurer leur efficacité.'
+        }
+      },
+      save: 'Enregistrer les choix',
+      cancel: 'Annuler',
+      withdraw: 'Retirer le consentement'
+    }
   }
 };

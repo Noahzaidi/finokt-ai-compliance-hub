@@ -1,13 +1,15 @@
-import { Mail, Linkedin, Settings } from "lucide-react";
+import { Mail, Linkedin, Settings, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FinoktAILogo } from "@/components/FinoktAILogo";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { CookieSettingsModal } from "./CookieSettingsModal";
+import { useI18n } from "@/lib/i18n";
 
 export const Footer = () => {
   const navigate = useNavigate();
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
+  const { t } = useI18n();
 
   const handleDemoClick = () => {
     navigate("/demo");
@@ -35,34 +37,38 @@ export const Footer = () => {
               <FinoktAILogo />
             </div>
             <p className="text-lg text-brand-blue mb-6">
-              AI for Smarter Compliance
+              {t("footer.tagline")}
             </p>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
               Revolutionizing KYC and compliance automation for banks and financial 
               institutions with cutting-edge AI technology.
             </p>
+            <div className="flex items-start gap-2 text-gray-300 mb-4">
+              <MapPin className="h-4 w-4 mt-1 text-brand-blue" />
+              <span>{t("footer.address")}</span>
+            </div>
             <Button variant="accent" onClick={handleDemoClick}>
-              Book a Demo
+              {t("footer.bookDemo")}
             </Button>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/#features" className="text-gray-300 hover:text-brand-blue transition-colors">
-                  Features
+                  {t("footer.features")}
                 </Link>
               </li>
               <li>
                 <Link to="/#how-it-works" className="text-gray-300 hover:text-brand-blue transition-colors">
-                  How It Works
+                  {t("footer.howItWorks")}
                 </Link>
               </li>
               <li>
                 <Link to="/#about" className="text-gray-300 hover:text-brand-blue transition-colors">
-                  About Us
+                  {t("footer.about")}
                 </Link>
               </li>
               <li>
@@ -70,7 +76,7 @@ export const Footer = () => {
                   onClick={handleDemoClick}
                   className="text-gray-300 hover:text-accent transition-colors text-left"
                 >
-                  Schedule Demo
+                  {t("footer.scheduleDemo")}
                 </button>
               </li>
               <li>
@@ -79,7 +85,7 @@ export const Footer = () => {
                   className="text-gray-300 hover:text-accent transition-colors text-left flex items-center gap-2"
                 >
                   <Settings className="h-4 w-4" />
-                  Cookie Settings
+                  {t("footer.cookieSettings")}
                 </button>
               </li>
             </ul>
@@ -87,7 +93,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.contact")}</h3>
             <div className="space-y-3">
               <button
                 onClick={handleEmailClick}
@@ -101,7 +107,7 @@ export const Footer = () => {
                 className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors group"
               >
                 <Linkedin className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                <span>LinkedIn Profile</span>
+                <span>{t("footer.linkedinProfile")}</span>
               </button>
             </div>
           </div>
@@ -111,11 +117,11 @@ export const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-center md:text-left">
-              © 2024 FinoktAI. All rights reserved.
+              {t("footer.copyright")}
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <p className="text-gray-400 text-center md:text-right">
-                Built for the future of financial compliance
+                {t("footer.bottomTag")}
               </p>
               <div className="flex items-center gap-4 text-sm">
                 <Link 
@@ -123,13 +129,13 @@ export const Footer = () => {
                   target="_blank"
                   className="text-gray-400 hover:text-accent transition-colors"
                 >
-                  Privacy Policy
+                  {t("footer.privacyPolicy")}
                 </Link>
                 <button 
                   onClick={handleCookieSettings}
                   className="text-gray-400 hover:text-accent transition-colors"
                 >
-                  Cookie Settings
+                  {t("footer.cookieSettings")}
                 </button>
               </div>
             </div>

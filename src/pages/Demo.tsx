@@ -2,8 +2,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Calendar, Clock, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useI18n } from "@/lib/i18n";
 
 export const Demo = () => {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -12,11 +14,10 @@ export const Demo = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-brand-navy mb-6">
-              Book Your Personalized Demo
+              {t("demo.title")}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how FinoktAI can transform your KYC and compliance processes. 
-              Schedule a personalized demo with our founder, Noah Zaidi.
+              {t("demo.subtitle")}
             </p>
           </div>
 
@@ -27,36 +28,36 @@ export const Demo = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl text-brand-navy flex items-center gap-3">
                     <Calendar className="h-6 w-6 text-brand-blue" />
-                    What to Expect
+                    {t("demo.expect")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Discovery Meeting (30 minutes)</h3>
-                      <p className="text-muted-foreground">Initial consultation to understand your specific problems and compliance challenges</p>
+                      <h3 className="font-semibold text-brand-navy">{t("demo.expect.1.title")}</h3>
+                      <p className="text-muted-foreground">{t("demo.expect.1.desc")}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Tailored Demo (30 minutes)</h3>
-                      <p className="text-muted-foreground">Customized product demonstration focused on solving your identified challenges</p>
+                      <h3 className="font-semibold text-brand-navy">{t("demo.expect.2.title")}</h3>
+                      <p className="text-muted-foreground">{t("demo.expect.2.desc")}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">Solution Mapping</h3>
-                      <p className="text-muted-foreground">Direct alignment of our AI platform features to your compliance requirements</p>
+                      <h3 className="font-semibold text-brand-navy">{t("demo.expect.3.title")}</h3>
+                      <p className="text-muted-foreground">{t("demo.expect.3.desc")}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-fintech-success mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-brand-navy">ROI Analysis & Next Steps</h3>
-                      <p className="text-muted-foreground">Projected savings and clear implementation roadmap for your organization</p>
+                      <h3 className="font-semibold text-brand-navy">{t("demo.expect.4.title")}</h3>
+                      <p className="text-muted-foreground">{t("demo.expect.4.desc")}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -66,26 +67,26 @@ export const Demo = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl text-brand-navy flex items-center gap-3">
                     <Clock className="h-6 w-6 text-brand-blue" />
-                    Demo Details
+                    {t("demo.details")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Duration</h4>
-                      <p className="text-muted-foreground">30 minutes</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">{t("demo.details.duration")}</h4>
+                      <p className="text-muted-foreground">{t("demo.details.duration.value")}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Format</h4>
-                      <p className="text-muted-foreground">Video call</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">{t("demo.details.format")}</h4>
+                      <p className="text-muted-foreground">{t("demo.details.format.value")}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Presenter</h4>
-                      <p className="text-muted-foreground">Noah Zaidi, CEO</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">{t("demo.details.presenter")}</h4>
+                      <p className="text-muted-foreground">{t("demo.details.presenter.value")}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Follow-up</h4>
-                      <p className="text-muted-foreground">Included</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">{t("demo.details.followUp")}</h4>
+                      <p className="text-muted-foreground">{t("demo.details.followUp.value")}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -97,7 +98,7 @@ export const Demo = () => {
               <Card className="border-border shadow-fintech">
                 <CardHeader>
                   <CardTitle className="text-2xl text-brand-navy text-center">
-                    Select Your Preferred Time
+                    {t("demo.selectTime")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">

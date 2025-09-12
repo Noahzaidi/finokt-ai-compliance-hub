@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Award, Building2, Target, Linkedin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useI18n } from "@/lib/i18n";
 
 export const About = () => {
   const navigate = useNavigate();
+  const { t } = useI18n();
 
   const handleDemoClick = () => {
     navigate("/demo");
@@ -21,11 +23,10 @@ export const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
-            About FinoktAI
+            {t("about.header")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Founded by compliance experts to revolutionize how financial institutions 
-            handle KYC and regulatory requirements.
+            {t("about.subheader")}
           </p>
         </div>
 
@@ -35,38 +36,36 @@ export const About = () => {
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
                 <Target className="h-6 w-6 text-brand-blue" />
-                <h3 className="text-2xl font-bold text-brand-navy">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-brand-navy">{t("about.mission.title")}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                To make compliance faster, smarter, and more affordable for financial institutions 
-                worldwide. We believe AI can eliminate the tedious manual work while improving 
-                accuracy and regulatory adherence.
+                {t("about.mission.desc")}
               </p>
             </div>
 
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
                 <Building2 className="h-6 w-6 text-brand-blue" />
-                <h3 className="text-2xl font-bold text-brand-navy">Why Choose Us</h3>
+                <h3 className="text-2xl font-bold text-brand-navy">{t("about.why.title")}</h3>
               </div>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-fintech-success rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Built by compliance professionals who understand real-world challenges</span>
+                  <span>{t("about.why.1")}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-fintech-success rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Enterprise-grade security and regulatory compliance built-in</span>
+                  <span>{t("about.why.2")}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-fintech-success rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Proven track record in AI, Fintech, and Trade Finance</span>
+                  <span>{t("about.why.3")}</span>
                 </li>
               </ul>
             </div>
 
             <Button variant="cta" size="lg" onClick={handleDemoClick}>
-              Schedule a Demo
+              {t("about.cta")}
             </Button>
           </div>
 
@@ -82,27 +81,25 @@ export const About = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy mb-2">Noah Zaidi</h3>
-                <p className="text-brand-blue font-semibold mb-4">Co-founder & CEO</p>
+                <p className="text-brand-blue font-semibold mb-4">{t("about.founder.role")}</p>
               </div>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-2">
                   <Award className="h-5 w-5 text-brand-blue" />
-                  <span className="text-muted-foreground">PMP Certified Project Manager</span>
+                  <span className="text-muted-foreground">{t("about.founder.pmp")}</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">AI Project Manager</Badge>
-                  <Badge variant="secondary">Compliance Expert</Badge>
-                  <Badge variant="secondary">AI Specialist</Badge>
-                  <Badge variant="secondary">Fintech</Badge>
-                  <Badge variant="secondary">Trade Finance</Badge>
+                  <Badge variant="secondary">{t("about.badge.pm")}</Badge>
+                  <Badge variant="secondary">{t("about.badge.ce")}</Badge>
+                  <Badge variant="secondary">{t("about.badge.ai")}</Badge>
+                  <Badge variant="secondary">{t("about.badge.fintech")}</Badge>
+                  <Badge variant="secondary">{t("about.badge.trade")}</Badge>
                 </div>
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With extensive experience in compliance consulting, AI project management, 
-                and fintech innovation, Noah brings deep industry knowledge to solve 
-                real compliance challenges with cutting-edge AI technology.
+                {t("about.founder.bio")}
               </p>
 
               <Button 
@@ -111,7 +108,7 @@ export const About = () => {
                 className="w-full group"
               >
                 <Linkedin className="h-4 w-4 mr-2 group-hover:text-accent transition-colors" />
-                Connect on LinkedIn
+                {t("about.linkedin")}
               </Button>
             </CardContent>
           </Card>

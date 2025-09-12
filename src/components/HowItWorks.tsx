@@ -1,40 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Upload, Brain, UserCheck, Shield, ScanFace } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const steps = [
   {
     step: "01",
     icon: Upload,
-    title: "Upload Documents",
-    description: "Customers upload identity documents through your secure portal or mobile app interface."
+    titleKey: "how.1.title",
+    descriptionKey: "how.1.desc"
   },
   {
     step: "02", 
     icon: ScanFace,
-    title: "Biometric Verification",
-    description: "Advanced face matching and liveness detection verify customer identity against document photos with 99.8% accuracy."
+    titleKey: "how.2.title",
+    descriptionKey: "how.2.desc"
   },
   {
     step: "03", 
     icon: Brain,
-    title: "AI Processing",
-    description: "Our AI extracts data fields, validates authenticity, and runs comprehensive compliance checks instantly."
+    titleKey: "how.3.title",
+    descriptionKey: "how.3.desc"
   },
   {
     step: "04",
     icon: Shield,
-    title: "Real-Time Monitoring",
-    description: "Powerful risk monitoring tools track compliance in real-time with comprehensive reports and audit trails."
+    titleKey: "how.4.title",
+    descriptionKey: "how.4.desc"
   },
   {
     step: "05",
     icon: UserCheck,
-    title: "Review & Approve",
-    description: "Compliance officers review flagged cases in the dashboard and approve verified customers."
+    titleKey: "how.5.title",
+    descriptionKey: "how.5.desc"
   }
 ];
 
 export const HowItWorks = () => {
+  const { t } = useI18n();
   return (
     <section id="how-it-works" className="py-20 bg-gradient-futuristic relative overflow-hidden">
       {/* Futuristic background elements */}
@@ -45,10 +47,10 @@ export const HowItWorks = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
-            How It Works
+            {t("how.header")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive KYC automation with biometric verification, risk monitoring and reporting in five steps
+            {t("how.description")}
           </p>
         </div>
 
@@ -72,10 +74,10 @@ export const HowItWorks = () => {
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-brand-navy mb-4">
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {step.description}
+                    {t(step.descriptionKey)}
                   </p>
                 </CardContent>
               </Card>

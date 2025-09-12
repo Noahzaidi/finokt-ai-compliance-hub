@@ -3,10 +3,13 @@ import { Menu, X } from "lucide-react";
 import { FinoktAILogo } from "@/components/FinoktAILogo";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useI18n } from "@/lib/i18n";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { t, language, setLanguage } = useI18n();
 
   const handleDemoClick = () => {
     navigate("/demo");
@@ -22,19 +25,22 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Features
+              {t("nav.features")}
             </Link>
             <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
-              How It Works
+              {t("nav.howItWorks")}
             </Link>
             <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors">
-              About
+              {t("nav.about")}
             </Link>
             <Button variant="accent" onClick={handleDemoClick}>
-              Book a Demo
+              {t("nav.bookDemo")}
             </Button>
+            <div className="ml-2">
+              <LanguageToggle />
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -60,25 +66,28 @@ export const Header = () => {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Features
+                {t("nav.features")}
               </Link>
               <Link
                 to="/#how-it-works"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How It Works
+                {t("nav.howItWorks")}
               </Link>
               <Link
                 to="/#about"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                {t("nav.about")}
               </Link>
               <Button variant="accent" onClick={handleDemoClick} className="w-full">
-                Book a Demo
+                {t("nav.bookDemo")}
               </Button>
+              <div className="pt-2">
+                <LanguageToggle />
+              </div>
             </nav>
           </div>
         )}

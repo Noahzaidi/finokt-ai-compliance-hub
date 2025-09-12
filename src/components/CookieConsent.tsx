@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { CookieBanner } from './CookieBanner';
 import { CookieSettingsModal } from './CookieSettingsModal';
 import { Language } from '@/types/consent';
+import { useI18n } from '@/lib/i18n';
 
 interface CookieConsentProps {
   language?: Language;
 }
 
-export const CookieConsent = ({ language = 'en' }: CookieConsentProps) => {
+export const CookieConsent = ({ language: propLanguage = 'en' }: CookieConsentProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { language } = useI18n();
 
   const handleCustomize = () => {
     setIsModalOpen(true);
@@ -20,11 +22,11 @@ export const CookieConsent = ({ language = 'en' }: CookieConsentProps) => {
 
   return (
     <>
-      <CookieBanner onCustomize={handleCustomize} language={language} />
+      <CookieBanner onCustomize={handleCustomize} language={language as Language} />
       <CookieSettingsModal 
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
-        language={language} 
+        language={language as Language} 
       />
     </>
   );

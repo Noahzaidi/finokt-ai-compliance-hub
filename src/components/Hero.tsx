@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-futuristic.jpg";
+import { useI18n } from "@/lib/i18n";
 
 export const Hero = () => {
   const navigate = useNavigate();
+  const { t } = useI18n();
 
   const handleDemoClick = () => {
     navigate("/demo");
@@ -25,29 +27,27 @@ export const Hero = () => {
           <div className="mb-8 lg:mb-0 lg:col-span-5">
             <div className="text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-navy mb-4 lg:mb-6 leading-tight">
-                AI-Powered KYC &{" "}
-                <span className="text-brand-blue">Compliance Automation</span>
+                {t("hero.title.prefix")} {" "}
+                <span className="text-brand-blue">{t("hero.title.highlight")}</span>
               </h1>
               
               <p className="text-lg lg:text-xl text-muted-foreground mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0">
-                FinoktAI helps banks and financial institutions streamline onboarding, 
-                reduce costs, and stay compliant with intelligent document processing, 
-                biometric face matching, and automated risk checks.
+                {t("hero.subtitle")}
               </p>
 
               {/* Key Benefits */}
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-6 lg:mb-8 justify-center lg:justify-start">
                 <div className="flex items-center gap-2 text-fintech-gray">
                   <CheckCircle className="h-5 w-5 text-fintech-success" />
-                  <span>90% faster onboarding</span>
+                  <span>{t("hero.benefit.faster")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-fintech-gray">
                   <CheckCircle className="h-5 w-5 text-fintech-success" />
-                  <span>99.9% accuracy</span>
+                  <span>{t("hero.benefit.accuracy")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-fintech-gray">
                   <CheckCircle className="h-5 w-5 text-fintech-success" />
-                  <span>Full compliance</span>
+                  <span>{t("hero.benefit.compliance")}</span>
                 </div>
               </div>
 
@@ -59,11 +59,11 @@ export const Hero = () => {
                   onClick={handleDemoClick}
                   className="group"
                 >
-                  Book a Demo
+                  {t("hero.cta.book")}
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button variant="outline" size="lg">
-                  Learn More
+                  {t("hero.cta.learn")}
                 </Button>
               </div>
             </div>

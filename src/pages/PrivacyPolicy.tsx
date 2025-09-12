@@ -6,9 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Settings, Mail } from 'lucide-react';
 import { CookieSettingsModal } from '@/components/CookieSettingsModal';
+import { useI18n } from '@/lib/i18n';
 
 const PrivacyPolicy = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t, language } = useI18n();
 
   const handleCookieSettings = () => {
     setIsModalOpen(true);
@@ -22,13 +24,13 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-foreground mb-4">
-              Privacy Policy
+              {t('privacy.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              How we collect, use, and protect your information
+              {t('privacy.subtitle')}
             </p>
             <p className="text-sm text-muted-foreground mt-2">
-              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {t('privacy.lastUpdated')}: {new Date().toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
 
@@ -38,46 +40,40 @@ const PrivacyPolicy = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Settings className="h-5 w-5 text-brand-blue" />
-                  Cookie Information
+                  {t('privacy.cookieInfo')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  We use cookies and similar technologies to enhance your browsing experience, 
-                  analyze site traffic, and serve personalized content. Below are the categories 
-                  of cookies we use:
+                  {t('privacy.cookie.p1')}
                 </p>
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Strictly Necessary</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('privacy.cookie.strict')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Essential cookies required for the website to function properly. These cannot be disabled 
-                      and include session management, security features, and consent preferences.
+                      {t('privacy.cookie.strict.desc')}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Preferences</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('privacy.cookie.pref')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Cookies that remember your choices and settings to provide enhanced features 
-                      and personalized experience across visits.
+                      {t('privacy.cookie.pref.desc')}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Analytics</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('privacy.cookie.analytics')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Cookies that help us understand how visitors interact with our website by 
-                      collecting anonymous information about usage patterns and performance metrics.
+                      {t('privacy.cookie.analytics.desc')}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Marketing</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('privacy.cookie.marketing')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Cookies used to deliver relevant advertisements and measure the effectiveness 
-                      of our marketing campaigns across different platforms.
+                      {t('privacy.cookie.marketing.desc')}
                     </p>
                   </div>
                 </div>
@@ -89,7 +85,7 @@ const PrivacyPolicy = () => {
                     className="gap-2"
                   >
                     <Settings className="h-4 w-4" />
-                    Manage Cookie Settings
+                    {t('privacy.manageCookies')}
                   </Button>
                 </div>
               </CardContent>
@@ -98,19 +94,18 @@ const PrivacyPolicy = () => {
             {/* Data Retention */}
             <Card className="border-border">
               <CardHeader>
-                <CardTitle>Data Retention</CardTitle>
+                <CardTitle>{t('privacy.dataRetention')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    We retain your personal information only for as long as necessary to fulfill 
-                    the purposes for which it was collected:
+                    {t('privacy.dataRetention.p1')}
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li>Cookie consent preferences: 6 months</li>
-                    <li>Analytics data: Anonymized after 26 months</li>
-                    <li>Marketing data: Until consent is withdrawn</li>
-                    <li>Essential operational data: As required by law</li>
+                    <li>{t('privacy.dataRetention.item1')}</li>
+                    <li>{t('privacy.dataRetention.item2')}</li>
+                    <li>{t('privacy.dataRetention.item3')}</li>
+                    <li>{t('privacy.dataRetention.item4')}</li>
                   </ul>
                 </div>
               </CardContent>
@@ -119,25 +114,25 @@ const PrivacyPolicy = () => {
             {/* Your Rights */}
             <Card className="border-border">
               <CardHeader>
-                <CardTitle>Your Rights</CardTitle>
+                <CardTitle>{t('privacy.rights')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    Under GDPR and other privacy laws, you have the following rights:
+                    {t('privacy.rights.p1')}
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li><strong>Access:</strong> Request a copy of your personal data</li>
-                    <li><strong>Rectification:</strong> Correct inaccurate personal data</li>
-                    <li><strong>Erasure:</strong> Request deletion of your personal data</li>
-                    <li><strong>Portability:</strong> Receive your data in a structured format</li>
-                    <li><strong>Objection:</strong> Object to processing of your personal data</li>
-                    <li><strong>Withdraw consent:</strong> Withdraw consent at any time</li>
+                    <li><strong>{t('privacy.rights.access').split(':')[0]}:</strong> {t('privacy.rights.access').split(':').slice(1).join(':').trim()}</li>
+                    <li><strong>{t('privacy.rights.rectification').split(':')[0]}:</strong> {t('privacy.rights.rectification').split(':').slice(1).join(':').trim()}</li>
+                    <li><strong>{t('privacy.rights.erasure').split(':')[0]}:</strong> {t('privacy.rights.erasure').split(':').slice(1).join(':').trim()}</li>
+                    <li><strong>{t('privacy.rights.portability').split(':')[0]}:</strong> {t('privacy.rights.portability').split(':').slice(1).join(':').trim()}</li>
+                    <li><strong>{t('privacy.rights.objection').split(':')[0]}:</strong> {t('privacy.rights.objection').split(':').slice(1).join(':').trim()}</li>
+                    <li><strong>{t('privacy.rights.withdraw').split(':')[0]}:</strong> {t('privacy.rights.withdraw').split(':').slice(1).join(':').trim()}</li>
                   </ul>
                   
                   <div className="pt-4">
                     <p className="text-sm text-muted-foreground mb-3">
-                      To exercise these rights or ask questions about our privacy practices:
+                      {t('privacy.rights.contactPreface')}
                     </p>
                     <Button 
                       variant="outline" 
@@ -145,7 +140,7 @@ const PrivacyPolicy = () => {
                       onClick={() => window.open('mailto:privacy@finokt.com', '_blank')}
                     >
                       <Mail className="h-4 w-4" />
-                      Contact Privacy Team
+                      {t('privacy.rights.contact')}
                     </Button>
                   </div>
                 </div>
@@ -155,18 +150,17 @@ const PrivacyPolicy = () => {
             {/* Contact Information */}
             <Card className="border-border">
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle>{t('privacy.contactInfo')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    If you have questions about this Privacy Policy or our data practices, 
-                    please contact us:
+                    {t('privacy.contactInfo.p1')}
                   </p>
                   <div className="space-y-2 text-muted-foreground">
-                    <p><strong>Email:</strong> privacy@finokt.com</p>
-                    <p><strong>Data Protection Officer:</strong> noah.zaidi@finokt.com</p>
-                    <p><strong>Response Time:</strong> Within 30 days of receipt</p>
+                    <p><strong>{t('privacy.contactInfo.email')}</strong> privacy@finokt.com</p>
+                    <p><strong>{t('privacy.contactInfo.dpo')}</strong> noah.zaidi@finokt.com</p>
+                    <p><strong>{t('privacy.contactInfo.response')}</strong> {t('privacy.contactInfo.response.value')}</p>
                   </div>
                 </div>
               </CardContent>
@@ -177,8 +171,7 @@ const PrivacyPolicy = () => {
 
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              This privacy policy is effective as of the date listed above and may be updated 
-              from time to time. We will notify you of any significant changes.
+              {t('privacy.footer')}
             </p>
           </div>
         </div>

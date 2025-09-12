@@ -24,7 +24,7 @@ export interface ThirdPartyScript {
   enabled: boolean;
 }
 
-export type Language = 'en' | 'es';
+export type Language = 'en' | 'es' | 'fr';
 
 export interface ConsentTexts {
   banner: {

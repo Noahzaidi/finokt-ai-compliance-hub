@@ -5,9 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Index from "./pages/Index";
 import { Demo } from "./pages/Demo";
+import { FinoktKYC } from "./pages/FinoktKYC";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import { CookieConsent } from "./components/CookieConsent";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { useEffect } from "react";
 import { I18nProvider } from "./lib/i18n";
 
@@ -31,10 +33,12 @@ const App = () => (
       <Sonner />
       <I18nProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <HashRedirector />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/demo" element={<Demo />} />
+            <Route path="/products/finoktkyc" element={<FinoktKYC />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

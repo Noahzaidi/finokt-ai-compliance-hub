@@ -29,6 +29,9 @@ export const Header = () => {
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors">
               {t("nav.features")}
             </Link>
+            <Link to="/#products" className="text-muted-foreground hover:text-foreground transition-colors">
+              Products
+            </Link>
             <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
               {t("nav.howItWorks")}
             </Link>
@@ -67,6 +70,13 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("nav.features")}
+              </Link>
+              <Link
+                to="/#products"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Products
               </Link>
               <Link
                 to="/#how-it-works"
